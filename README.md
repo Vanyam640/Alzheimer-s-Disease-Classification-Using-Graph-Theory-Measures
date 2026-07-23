@@ -1,13 +1,25 @@
-# Alzheimer-s-Disease-Classification-Using-Graph-Theory-Measures
+# Alzheimer’s Disease Classification Using Graph‑Theory Measures
 
-Characterizing brain network connectivity differences in Alzheimer’s disease (AD) using graph‑theory measures derived from RM96‑parcellated resting‑state fMRI, with statistical analysis and an SVM classifier (reported accuracy ≈ 75%, AUC ≈ 0.78).
+Characterizing brain network connectivity differences in Alzheimer’s disease (AD) using graph‑theory measures derived from RM96‑parcellated resting‑state fMRI, with statistical analysis and an SVM classifier (accuracy ≈ 75%, AUC ≈ 0.78).
 
-Key contents
-- Project description, methods, and key results (thesis summary).
-- Preprocessed artifacts: `fc_matrices.npy` (stacked subject FC matrices), `metadata.csv`.
-- Nodewise metric outputs and Cohen’s d tables: `*_nodewise_thr03.csv`, `cohens_d_*.csv`.
-- Figures: heatmaps, glass‑brain visualizations, top‑ROI barplots, PCA scatter, ROC and confusion matrix.
-- Reproducibility: a detailed run summary and README‑style instructions for reproducing results.
+Note on data access: The imaging data used in this project are from the Alzheimer’s Disease Neuroimaging Initiative (ADNI). These data are not publicly downloadable without an ADNI data use agreement and approved account; users must register with ADNI and comply with their data‑use terms before requesting or accessing the raw imaging data.
+
+## Table of contents
+- [Abstract](#abstract)
+- [Cohort demographics (summary)](#cohort-demographics-summary
+- [Research questions](#research-questions)
+- [Data & cohort](#data--cohort)
+- [Methods (high level)](#methods-high-level)
+- [Process (detailed)](#process-detailed)
+- [Key results (summary)](#key-results-summary)
+- [Figures and tables](#figures-and-tables)
+- [Files & artifacts](#files--artifacts)
+- [Reproducibility notes](#reproducibility-notes)
+- [What I learned](#what-i-learned-detailed)
+- [Limitations](#limitations-explicit)
+- [Future directions](#future-directions)
+- [Broader significance](#broader-significance)
+- [Acknowledgements & contact](#acknowledgements--contact)
 
 # Characterizing Brain Network Connectivity Differences in Alzheimer’s Disease
 Author: Evawn (Vanya) Murzin  
@@ -16,7 +28,15 @@ Reader: Sabiha Mahzabeen
 
 ## Abstract
 This honors thesis uses resting‑state fMRI from the ADNI‑2 cohort (20 Alzheimer’s disease patients, 20 cognitively normal controls) and the RM96 parcellation to compute 96×96 functional connectivity (FC) matrices. After preprocessing and sparsity thresholding, local and global graph‑theory measures were computed and compared across groups (Cohen’s d). Graph metrics were combined as features in a machine learning pipeline (PCA + SVM) to evaluate classification performance (accuracy ≈ 75%, AUC ≈ 0.78). Results highlight reduced local clustering and local efficiency in frontal and medial‑temporal areas in AD; full code and artifacts are provided separately for reproducibility.
+---
+### Cohort demographics (summary)
+| Group | N | Age (mean ± SD) | Sex (M / F) |
+|---:|---:|---:|---:|
+| AD (Alzheimer’s disease) | 20 | 78.4 ± 5.3 years | 10 / 10 |
+| CN (Cognitively normal) | 20 | 77.9 ± 5.7 years | 10 / 10 |
+| Total | 40 | 78.1 ± 5.5 years | 20 / 20 |
 
+Note: demographic numbers above are the study summary included in the project materials — replace with exact values from your `metadata.csv` if they differ.
 ---
 
 ## Research questions
