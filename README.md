@@ -6,7 +6,6 @@ Note on data access: The imaging data used in this project are from the Alzheime
 
 ## Table of contents
 - [Abstract](#abstract)
-- [Cohort demographics (summary)](#cohort-demographics-summary)
 - [Research questions](#research-questions)
 - [Data & cohort](#data--cohort)
 - [Methods (high level)](#methods-high-level)
@@ -29,12 +28,6 @@ Reader: Sabiha Mahzabeen
 ## Abstract
 This honors thesis uses resting‑state fMRI from the ADNI‑2 cohort (20 Alzheimer’s disease patients, 20 cognitively normal controls) and the RM96 parcellation to compute 96×96 functional connectivity (FC) matrices. After preprocessing and sparsity thresholding, local and global graph‑theory measures were computed and compared across groups (Cohen’s d). Graph metrics were combined as features in a machine learning pipeline (PCA + SVM) to evaluate classification performance (accuracy ≈ 75%, AUC ≈ 0.78). Results highlight reduced local clustering and local efficiency in frontal and medial‑temporal areas in AD; full code and artifacts are provided separately for reproducibility.
 ---
-### Cohort demographics (summary)
-| Group | N | Age (mean ± SD) | Sex (M / F) |
-|---:|---:|---:|---:|
-| AD (Alzheimer’s disease) | 20 | 78.4 ± 5.3 years | 10 / 10 |
-| CN (Cognitively normal) | 20 | 77.9 ± 5.7 years | 10 / 10 |
-| Total | 40 | 78.1 ± 5.5 years | 20 / 20 |
 
 Note: demographic numbers above are the study summary included in the project materials — replace with exact values from your `metadata.csv` if they differ.
 ---
@@ -51,6 +44,13 @@ Note: demographic numbers above are the study summary included in the project ma
 - Imaging: T1 MPRAGE and resting‑state fMRI (Philips Achieva 3T; TR = 3000 ms; 140 volumes).  
 - Parcellation: RM96 atlas (82 cortical + 14 subcortical ROIs) producing 96×96 FC matrices.  
 - FC exports: comma‑delimited `.txt` files, diagonals exported as NaN, off‑diagonals finite and symmetric (floating noise ≈ 1e‑14).
+
+### Cohort demographics (summary)
+| Group | N | Age (mean ± SD) | Sex (M / F) |
+|---:|---:|---:|---:|
+| AD (Alzheimer’s disease) | 20 | 78.4 ± 5.3 years | 10 / 10 |
+| CN (Cognitively normal) | 20 | 77.9 ± 5.7 years | 10 / 10 |
+| Total | 40 | 78.1 ± 5.5 years | 20 / 20 |
 
 ---
 
