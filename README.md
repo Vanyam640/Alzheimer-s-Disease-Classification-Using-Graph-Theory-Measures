@@ -6,7 +6,7 @@ Note on data access: The imaging data used in this project are from the Alzheime
 
 ## Table of contents
 - [Abstract](#abstract)
-- [Cohort demographics (summary)](#cohort-demographics-summary
+- [Cohort demographics (summary)](#cohort-demographics-summary)
 - [Research questions](#research-questions)
 - [Data & cohort](#data--cohort)
 - [Methods (high level)](#methods-high-level)
